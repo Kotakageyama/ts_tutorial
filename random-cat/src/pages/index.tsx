@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { NextPage, GetServerSideProps } from "next";
+import { editor } from "monaco-editor";
 
 const catImages: string[] = [
   "https://cdn2.thecatapi.com/images/bpc.jpg",
@@ -43,6 +44,8 @@ const IndexPage: NextPage<IndexPageProps> = ({ initialCatImageUrl }) => {
         const image = await fetchCatImages();
         setcatImageUrl(image.url);
     }
+    const div = document.createElement("div");
+    editor.create(div);
     return (
         <div>
             <button onClick={handleClick}>きょうのにゃんこ🐱</button>
