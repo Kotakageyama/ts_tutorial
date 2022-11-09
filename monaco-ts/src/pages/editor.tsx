@@ -33,6 +33,13 @@ const EditorPage: NextPage = () => {
 		// here is the editor instance
 		// you can store it in `useRef` for further usage
 		MonacoServices.install();
+		if (editor && editor.getModel()) {
+			const editorModel = editor.getModel();
+			if (editorModel) {
+				editorModel.setValue('{\n    "sayHello": "hello"\n}');
+			}
+		}
+		editor.focus();
 		console.log("hhh", editor, monaco);
 		if (editor !== undefined && editor) {
 			editorRef.current = editor;

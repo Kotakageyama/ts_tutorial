@@ -4,17 +4,16 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = nextConfig
-
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 const withTM = require("next-transpile-modules")([
   // `monaco-editor` isn't published to npm correctly: it includes both CSS
   // imports and non-Node friendly syntax, so it needs to be compiled.
-  "monaco-editor"
+  "monaco-editor",
 ]);
 
-module.exports = withTM({
-  webpack: config => {
+const config = withTM({
+  reactStrictMode: true,
+  webpack: (config, options) => {
     const rule = config.module.rules
       .find(rule => rule.oneOf)
       .oneOf.find(
@@ -26,10 +25,10 @@ module.exports = withTM({
       rule.issuer.include = [
         rule.issuer.include,
         // Allow `monaco-editor` to import global CSS:
-        /[\\/]node_modules[\\/]monaco-editor[\\/]/
+        /[\\/]node_modules[\\/]monaco-editor[\\/]/,
       ];
     }
-
+    if (!options.isServer){
     config.plugins.push(
       new MonacoWebpackPlugin({
         languages: [
@@ -47,6 +46,9 @@ module.exports = withTM({
         filename: "static/[name].worker.js"
       })
     );
+    }
     return config;
   }
 });
+
+module.exports = Object.assign(config, nextConfig)
