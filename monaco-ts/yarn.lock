@@ -2293,6 +2293,11 @@
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.7.tgz"
   "version" "1.2.7"
 
+"monaco-editor-workers@^0.34.2":
+  "integrity" "sha512-MdO1nvAbGNzc7ygyzwACvs5DOPaTOUNDjU/qTQx0Rsw00BrhL88eMi9sWBm+LYfQbPaZf+YBqwJaJUovl3M6bQ=="
+  "resolved" "https://registry.npmjs.org/monaco-editor-workers/-/monaco-editor-workers-0.34.2.tgz"
+  "version" "0.34.2"
+
 "monaco-editor@^0.34.0", "monaco-editor@^0.34.1", "monaco-editor@>= 0.21.0 < 1", "monaco-editor@>= 0.25.0 < 1":
   "integrity" "sha512-FKc80TyiMaruhJKKPz5SpJPIjL+dflGvz4CpuThaPMc94AyN7SeC9HQ8hrvaxX7EyHdJcUY5i4D0gNyJj1vSZQ=="
   "resolved" "https://registry.npmjs.org/monaco-editor/-/monaco-editor-0.34.1.tgz"
@@ -2384,6 +2389,11 @@
   "integrity" "sha512-PiVXnNuFm5+iYkLBNeq5211hvO38y63T0i2KKh2KnUs3RpzJ+JtODFjkD8yjLwnDkTYF1eKXheUwdssR+NRZdg=="
   "resolved" "https://registry.npmjs.org/node-releases/-/node-releases-2.0.6.tgz"
   "version" "2.0.6"
+
+"normalize-url@^8.0.0":
+  "integrity" "sha512-uVFpKhj5MheNBJRTiMZ9pE/7hD1QTeEvugSJW/OmLzAp78PB5O6adfMNTvmfKhXBkvCzC+rqifWcVYpGFwTjnw=="
+  "resolved" "https://registry.npmjs.org/normalize-url/-/normalize-url-8.0.0.tgz"
+  "version" "8.0.0"
 
 "object-assign@^4.1.0", "object-assign@^4.1.1":
   "integrity" "sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg=="
