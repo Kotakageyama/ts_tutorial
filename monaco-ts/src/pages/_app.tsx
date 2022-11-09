@@ -2,6 +2,11 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 
+import * as monaco from "monaco-editor";
+import { loader } from "@monaco-editor/react";
+
+loader.config({ monaco });
+
 function MyApp(props: AppProps) {
 	const { Component, pageProps } = props;
 
