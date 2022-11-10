@@ -42,7 +42,8 @@ const config = withTM({
           "graphql",
           "python",
           "scss",
-          "yaml"
+          "yaml",
+          "go"
         ],
         filename: "static/[name].worker.js"
       })
@@ -51,5 +52,5 @@ const config = withTM({
     return config;
   }
 });
-
-module.exports = removeImports(Object.assign(config, nextConfig));
+module.exports = nextConfig;
+module.exports = removeImports(config);
