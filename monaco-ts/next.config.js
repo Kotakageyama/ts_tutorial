@@ -5,6 +5,7 @@ const nextConfig = {
 }
 
 const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
+const removeImports = require("next-remove-imports")();
 const withTM = require("next-transpile-modules")([
   // `monaco-editor` isn't published to npm correctly: it includes both CSS
   // imports and non-Node friendly syntax, so it needs to be compiled.
@@ -51,4 +52,4 @@ const config = withTM({
   }
 });
 
-module.exports = Object.assign(config, nextConfig)
+module.exports = removeImports(Object.assign(config, nextConfig));

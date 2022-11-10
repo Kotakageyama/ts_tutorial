@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import * as monaco from "monaco-editor";
+import Editor, { EditorProps } from "@monaco-editor/react";
 
 // @ts-ignore
 self.MonacoEnvironment = {
@@ -20,23 +21,16 @@ self.MonacoEnvironment = {
 	},
 };
 
-export const Editor: React.FC = () => {
-	const divEl = useRef<HTMLDivElement>(null);
-	let editor: monaco.editor.IStandaloneCodeEditor;
-	useEffect(() => {
-		if (divEl.current) {
-			editor = monaco.editor.create(divEl.current, {
-				value: [
-					"function x() {",
-					'\tconsole.log("Hello world!");',
-					"}",
-				].join("\n"),
-				language: "typescript",
-			});
-		}
-		return () => {
-			editor.dispose();
-		};
-	}, []);
-	return <div className="Editor" ref={divEl}></div>;
+const CodeEditor = (props: EditorProps) => {
+	return (
+		<Editor
+			height={props.height}
+			theme={props.theme}
+			defaultLanguage={props.defaultLanguage}
+			defaultValue={props.defaultValue}
+			onMount={props.onMount}
+		/>
+	);
 };
+
+export default CodeEditor;
