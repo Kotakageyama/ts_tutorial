@@ -6,6 +6,10 @@ module.exports = {
     join(__dirname, 'index.html'),
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+    },
     extend: {
       fontFamily: {
         raleway: ['Raleway'],
