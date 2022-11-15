@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+const { join } = require('path')
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    join(__dirname, 'src/**/*.{js,ts,jsx,tsx}'),
+    join(__dirname, 'index.html'),
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        raleway: ['Raleway'],
+        kosugimaru: ['Kosugi Maru'],
+        azeretmono: ['Azeret Mono'],
+      },
+    },
+    daisyui: {
+      themes: ['cupcake', 'dark', 'cmyk'],
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')],
 }
