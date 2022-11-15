@@ -1,46 +1,26 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import EditorPage from './pages/Editor'
+import NaviBar from './components/NaviBar'
+import Home from './components/Home'
 
-function App() {
+const App: React.FC = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="container mx-auto px-4 place-content-center">
-      <div className="navbar bg-base-100">
-        <div className="flex-1">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
-        </div>
-        <div className="flex-none">
-          <button className="btn btn-square btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-5 h-5 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div className="card w-96 bg-base-100 shadow-xl place-content-center">
-        <figure>
-          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+    <div className="container mx-auto">
+      <NaviBar />
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold">Monaco ts Editor</h1>
+            <p className="py-6">
+              ここでは簡単に式を組むことが出来ます。<br></br>
+              色々なコードがあなたを待っています。
+            </p>
+            <Home />
           </div>
         </div>
       </div>
-      <EditorPage />
     </div>
   )
 }
