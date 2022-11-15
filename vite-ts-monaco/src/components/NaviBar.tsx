@@ -1,10 +1,19 @@
-const NaviBar = () => {
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const NaviBar: React.FC = () => {
   return (
     <div className="navbar bg-base-100 fixed top-0">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Home</a>
-        <a className="btn btn-ghost normal-case text-xl">Editor</a>
-        <a className="btn btn-ghost normal-case text-xl">Scratch</a>
+        <Link to="/">
+          <a className="btn btn-ghost normal-case text-xl">Home</a>
+        </Link>
+        <Link to="/editor">
+          <a className="btn btn-ghost normal-case text-xl">Editor</a>
+        </Link>
+        <Link to="/scratch">
+          <a className="btn btn-ghost normal-case text-xl">Scratch</a>
+        </Link>
       </div>
       <div className="flex-none">
         <button className="btn btn-square btn-ghost">

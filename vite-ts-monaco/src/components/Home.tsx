@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home: React.FC = () => {
   return (
@@ -8,7 +9,9 @@ const Home: React.FC = () => {
           <h2 className="card-title">Editor</h2>
           <p>コードを書いて作成できます</p>
           <div className="card-actions justify-end">
-            <button className="btn">使ってみる</button>
+            <Link to="/editor">
+              <button className="btn">使ってみる</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -17,7 +20,9 @@ const Home: React.FC = () => {
           <h2 className="card-title">Scratch</h2>
           <p>ドラックアンドドロップで作成できます</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">使ってみる</button>
+            <Link to="/scratch">
+              <button className="btn btn-primary">使ってみる</button>
+            </Link>
           </div>
         </div>
       </div>

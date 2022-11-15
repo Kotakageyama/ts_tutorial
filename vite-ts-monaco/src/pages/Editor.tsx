@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { OnMount } from '@monaco-editor/react'
 import CodeEditor from '../components/CodeEditor'
+import NaviBar from '../components/NaviBar'
 
 const EditorPage = () => {
   const editorRef = useRef<any>()
@@ -21,13 +22,16 @@ const EditorPage = () => {
     }
   }
   return (
-    <CodeEditor
-      height="60vh"
-      theme="vs-dark"
-      defaultLanguage="typescript"
-      defaultValue="// some comment"
-      onMount={handleEditorDidMount}
-    />
+    <div className="container mx-auto">
+      <NaviBar />
+      <CodeEditor
+        height="60vh"
+        theme="vs-dark"
+        defaultLanguage="typescript"
+        defaultValue="// some comment"
+        onMount={handleEditorDidMount}
+      />
+    </div>
   )
 }
 

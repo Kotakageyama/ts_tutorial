@@ -1,10 +1,6 @@
-import React, { useState } from 'react'
-import NaviBar from './components/NaviBar'
-import Home from './components/Home'
-
-const App: React.FC = () => {
-  const [count, setCount] = useState(0)
-
+import React from 'react'
+import NaviBar from '../components/NaviBar'
+const ScratchPage: React.FC = () => {
   return (
     <div className="container mx-auto">
       <NaviBar />
@@ -13,10 +9,10 @@ const App: React.FC = () => {
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Monaco ts Editor</h1>
             <p className="py-6">
-              ここでは簡単に式を組むことが出来ます。<br></br>
+              ここではドラッグアンドドロップで簡単に式を組むことが出来ます。
+              <br></br>
               色々なコードがあなたを待っています。
             </p>
-            <Home />
           </div>
         </div>
       </div>
@@ -24,4 +20,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export default ScratchPage
