@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import EditorPage from './pages/Editor'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 place-content-center">
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
@@ -28,6 +28,19 @@ function App() {
           </button>
         </div>
       </div>
+      <div className="card w-96 bg-base-100 shadow-xl place-content-center">
+        <figure>
+          <img src="https://placeimg.com/400/225/arch" alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">Shoes!</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <EditorPage />
     </div>
   )
 }
