@@ -34,3 +34,9 @@ PostCSS Language Support を拡張機能で入れる
 ```bash
 yarn dev
 ```
+
+# 参考
+
+[daisyui](https://daisyui.com/docs/)
+
+[tailwindcss](https://tailwindcss.com/docs/installation)
