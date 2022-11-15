@@ -17,6 +17,18 @@ touch .vscode/settings.json
 }
 ```
 
+# Unknown at rule @tailwind
+
+PostCSS Language Support を拡張機能で入れる
+もしくは以下のように変更する。
+
+```CSS:index.css
+// index.css
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+```
+
 # run
 
 ```bash
