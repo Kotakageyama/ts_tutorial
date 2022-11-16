@@ -6,7 +6,7 @@ const App: React.FC = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto w-full">
       <NaviBar />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
@@ -20,6 +20,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </div>
+      <Home />
     </div>
   )
 }

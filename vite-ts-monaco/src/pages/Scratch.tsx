@@ -2,7 +2,7 @@ import React from 'react'
 import NaviBar from '../components/NaviBar'
 const ScratchPage: React.FC = () => {
   return (
-    <div className="container mx-auto">
+    <div className="w-full mx-auto">
       <NaviBar />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">

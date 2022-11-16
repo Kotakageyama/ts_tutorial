@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { OnMount } from '@monaco-editor/react'
 import CodeEditor from '../components/CodeEditor'
+import Editor from '@monaco-editor/react'
 import NaviBar from '../components/NaviBar'
 
 const EditorPage = () => {
@@ -22,7 +23,7 @@ const EditorPage = () => {
     }
   }
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto w-full">
       <NaviBar />
       <CodeEditor
         height="60vh"
