@@ -4,7 +4,7 @@ const ScratchPage: React.FC = () => {
   return (
     <div className="w-full mx-auto">
       <NaviBar />
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-base-200 pt-16">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Monaco ts Editor</h1>
