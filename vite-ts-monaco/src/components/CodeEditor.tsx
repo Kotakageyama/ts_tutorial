@@ -1,8 +1,13 @@
 import { useRef, useEffect } from 'react'
-import * as monaco from 'monaco-editor'
-import Editor, { EditorProps } from '@monaco-editor/react'
+import Editor, { EditorProps, useMonaco, Monaco } from '@monaco-editor/react'
 
-const CodeEditor: React.FC<EditorProps> = (props: EditorProps) => {
+type EditorPageProps = {
+  onClickSave: () => void
+  onClickRun: () => void
+  resultValue: string
+} & EditorProps
+
+const CodeEditor: React.FC<EditorPageProps> = (props: EditorPageProps) => {
   return (
     <div className="min-h-screen bg-base-200 pt-20">
       <div className="grid grid-cols-7 gap-2 p-2">
@@ -16,12 +21,23 @@ const CodeEditor: React.FC<EditorProps> = (props: EditorProps) => {
           />
         </div>
         <div className="mockup-code col-end-7 col-span-2">
-          <pre>
-            <code>without prefix</code>
-          </pre>
+          {props.resultValue.split('\n').map((value) => {
+            return (
+              <pre>
+                <code>{value}</code>
+              </pre>
+            )
+          })}
         </div>
-        <div className="col-start-5 btn btn-primary">保存する</div>
-        <div className="btn">実行する</div>
+        <button
+          className="col-start-5 btn btn-primary"
+          onClick={props.onClickSave}
+        >
+          保存する
+        </button>
+        <button className="btn" onClick={props.onClickRun}>
+          実行する
+        </button>
       </div>
     </div>
   )
