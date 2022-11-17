@@ -23,10 +23,11 @@ const EditorPage = () => {
     }
   }
   return (
-    <div className="mx-auto w-full">
+    <div className="mx-auto w-full block">
       <NaviBar />
       <CodeEditor
-        height="60vh"
+        height="400px"
+        width="800px"
         theme="vs-dark"
         defaultLanguage="typescript"
         defaultValue="// some comment"
